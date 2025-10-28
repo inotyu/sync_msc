@@ -1,0 +1,8 @@
+DISPLAY_NAME=sync
+MAIN=index.js
+MEMORY=896
+VERSION=recommended
+LANGUAGE=python
+CUSTOM_COMMAND=PORT=80 sh start.sh
+SUBDOMAIN=syncmsc
+APPID=4f8de228-0220-4b98-be56-3ebe736fa7d1

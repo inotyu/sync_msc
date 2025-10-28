@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodutor de Música do YouTube</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="src/guia.png" type="image/png">
+</head>
+<body>
+    <div class="reprodutor">
+        <div id="reprodutor" style="display: none;"></div>
+        <div class="container-miniatura"></div>
+        <input type="text" id="url-video" placeholder="Insira o link do vídeo do YouTube">
+        <button id="carregar-video">Carregar Vídeo</button>
+        <div id="controles-audio">
+            <button id="tocar">
+                <img src="src/icone-tocar.png" alt="Tocar" />
+            </button>
+            <button id="pausar">
+                <img src="src/icone-pausar.png" alt="Pausar" />
+            </button>
+            <button id="parar">
+                <img src="src/icone-parar.png" alt="Parar" />
+            </button>
+        </div>
+        <div id="tempo-atual">
+            <p id="tempo-atual">0:00</p>
+        </div>
+        <div id="controles-playlist">
+            <button id="video-anterior">Anterior</button>
+            <button id="proximo-video">Próximo</button>
+        </div>
+    </div>
+    <div id="playlist" class="container-playlist">
+        <p>Playlist</p>
+        <div id="miniaturas-playlist"></div>
+        <div id="controles-paginacao">
+            <button id="pagina-anterior">
+                <img src="src/anterior.png" alt="Voltar" />
+            </button>
+            <button id="proxima-pagina">
+                <img src="src/proximo.png" alt="Avançar" />
+            </button>
+        </div>        
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>

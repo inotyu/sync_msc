@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncMusic - Ouça com Amigos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='src/guia.png') }}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">🎵 SyncMusic</a>
+        <ul class="nav-links">
+            <li><a href="#features">Recursos</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Beta Badge -->
+        <div class="beta-badge">
+            <span class="beta-icon">🚧</span>
+            <span class="beta-text">VERSÃO BETA</span>
+            <span class="beta-description">Em desenvolvimento ativo - Novas funcionalidades chegando em breve!</span>
+        </div>
+        
+        <h1>Transformando ideias em experiências musicais sincronizadas</h1>
+        <p class="subtitle">
+            Ouça música do YouTube sincronizado com seus amigos em tempo real. 
+            Crie salas privadas, controle a reprodução e compartilhe momentos únicos.
+        </p>
+        
+        <!-- Cards Container -->
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">🎛️</div>
+                <h3>Criar Nova Sala</h3>
+                <p>Seja o host e tenha controle total sobre a reprodução. Adicione músicas, pause, pule e gerencie a experiência musical para todos os participantes.</p>
+                <a href="{{ url_for('criar_sala') }}" class="btn btn-primary">
+                    ✨ Criar Sala
+                </a>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">🎧</div>
+                <h3>Entrar em Sala</h3>
+                <p>Junte-se a uma sala existente usando o código de 5 caracteres. Sincronize automaticamente com o host e desfrute da música em perfeita harmonia.</p>
+                <a href="{{ url_for('entrar_sala') }}" class="btn btn-secondary">
+                    🚀 Entrar na Sala
+                </a>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-grid" id="features">
+            <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <h4>Sincronização em Tempo Real</h4>
+                <p>Todos ouvem no mesmo momento, mesmo entrando no meio da música</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🔐</span>
+                <h4>Salas Privadas</h4>
+                <p>Códigos únicos de 5 caracteres para máxima privacidade</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🎮</span>
+                <h4>Controle Total</h4>
+                <p>Host pode adicionar, pausar, pular e gerenciar toda a playlist</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">📱</span>
+                <h4>Multi-Plataforma</h4>
+                <p>Funciona perfeitamente em desktop, tablet e smartphone</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

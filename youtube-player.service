@@ -1,0 +1,12 @@
+[Unit]
+Description=YouTube Player Application
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/caminho/para/seu/app
+ExecStart=/usr/bin/python3 /caminho/para/seu/app/wsgi.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

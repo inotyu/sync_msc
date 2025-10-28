@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar na Sala - SyncMusic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='src/guia.png') }}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}" class="logo">🎵 SyncMusic</a>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Form Section -->
+    <section class="hero">
+        <div class="form-container-modern">
+            <div class="form-header">
+                <h1>🎧 Entrar na Sala</h1>
+                <p>Digite o código de 5 caracteres para se juntar à experiência musical</p>
+            </div>
+            
+            {% if erro %}
+                <div class="alert alert-error">
+                    <span class="alert-icon">⚠️</span>
+                    {{ erro }}
+                </div>
+            {% endif %}
+            
+            <form method="POST" class="modern-form">
+                <div class="input-group-modern">
+                    <label for="codigo">Código da Sala</label>
+                    <input type="text" id="codigo" name="codigo" placeholder="Ex: ABC12" maxlength="5" required>
+                    <span class="input-hint">Código fornecido pelo host da sala</span>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        🚀 Entrar na Sala
+                    </button>
+                    <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                        ← Voltar ao Menu
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Converte automaticamente para maiúsculas e adiciona animações
+        document.getElementById('codigo').addEventListener('input', function(e) {
+            e.target.value = e.target.value.toUpperCase();
+        });
+
+        // Animação de foco nos inputs
+        document.querySelectorAll('.modern-form input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
