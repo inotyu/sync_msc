@@ -1,61 +1,110 @@
-Aqui está o README completo, sem o formato Markdown:
-
-# YouTube Playlist Player
+# Sync Music Player 🎵
 
 ### Select Your Language / Selecione seu Idioma
 [![English](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/50px-Flag_of_the_United_Kingdom_%283-5%29.svg.png)](#-english-instructions)  
 [![Português](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/45px-Flag_of_Brazil.svg.png)](#-instruções-em-português)
 
-This project is a web application that allows you to create a playlist of YouTube videos, control the video playback, and navigate through your playlist using a custom player built with HTML, CSS, and JavaScript.
+## 🇬🇧 English Instructions
 
-### Warning: the code is written in Brazilian Portuguese.
+### 🚀 Overview
+Sync Music Player is a web application that allows multiple users to create and share synchronized YouTube playlists in real-time. Built with Python (Flask) and JavaScript, it provides a seamless experience for collaborative music listening.
 
-<a href="https://ibb.co/vjGcy0z"><img src="" alt="Captura-de-Tela-3" border="0" /></a>
+### ✨ Features
+- Real-time playlist synchronization
+- Multiple user rooms for collaborative listening
+- Intuitive playback controls
+- Responsive design for all devices
+- YouTube video integration
 
-## Instructions
+### 🛠️ Installation
 
-### 🇬🇧 English Instructions
-
-1. **Clone the project:**
-
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/inotyu/sync_msc.git
+   cd sync_msc
    ```
-   git clone <repository-url>
-   cd youtube-player
-   ```
 
-2. **Create a virtual environment (optional but recommended):**
-
-   ```
+2. **Set up a virtual environment (recommended):**
+   ```bash
+   # Windows
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   .\venv\Scripts\activate
+   
+   # Linux/Mac
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
-3. **Install the required dependencies:**
-
-   This project doesn't require additional Python dependencies, but you will need:
-   - Google Chrome or Mozilla Firefox
-   - A text editor or IDE (such as VSCode)
-
-4. **Set up the project:**
-
-   Simply open the `index.html` file in your preferred browser. The project relies on the YouTube API, so an internet connection is required to load and play the videos.
-
-5. **Usage:**
-
-   - Add YouTube video links to the input field and click "Carregar Vídeo" to add them to your playlist.
-   - Use the playback controls to play, pause, and stop the video.
-   - Use the "Próximo" and "Anterior" buttons to navigate through the playlist.
-   - Use the pagination controls to navigate through multiple pages of the playlist.
-
----
-
-### 🇧🇷 Instruções em Português
-
-1. **Clone o projeto:**
-
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
    ```
-   git clone <url-do-repositorio>
-   cd youtube-player
+
+4. **Run the application:**
+   ```bash
+   python app.py
+   ```
+   The application will be available at `http://localhost:5000`
+
+### 🎮 Usage
+1. Open the application in your web browser
+2. Create a new room or join an existing one
+3. Add YouTube video URLs to the playlist
+4. Control playback for all users in the room
+
+## 🇧🇷 Instruções em Português
+
+### 🚀 Visão Geral
+O Sync Music Player é uma aplicação web que permite que múltiplos usuários criem e compartilhem playlists do YouTube sincronizadas em tempo real. Desenvolvido com Python (Flask) e JavaScript, oferece uma experiência fluida para escuta colaborativa de músicas.
+
+### ✨ Recursos
+- Sincronização de playlist em tempo real
+- Salas para múltiplos usuários
+- Controles intuitivos de reprodução
+- Design responsivo
+- Integração com vídeos do YouTube
+
+### 🛠️ Instalação
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/inotyu/sync_msc.git
+   cd sync_msc
+   ```
+
+2. **Crie um ambiente virtual (recomendado):**
+   ```bash
+   # Windows
+   python -m venv venv
+   .\venv\Scripts\activate
+   
+   # Linux/Mac
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Execute a aplicação:**
+   ```bash
+   python app.py
+   ```
+   A aplicação estará disponível em `http://localhost:5000`
+
+### 🎮 Como Usar
+1. Abra a aplicação no navegador
+2. Crie uma nova sala ou entre em uma existente
+3. Adicione vídeos do YouTube à playlist
+4. Controle a reprodução para todos os usuários da sala
+
+### 📝 Licença
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+### 👥 Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
    ```
 
 2. **Crie um ambiente virtual (opcional, mas recomendado):**
